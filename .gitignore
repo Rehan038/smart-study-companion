@@ -1,0 +1,21 @@
+# Python common
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env
+
+# Streamlit
+.streamlit/
+
+# Local Data/Databases
+data/uploads/*
+!data/uploads/.gitkeep
+*.db
+*.sqlite
+
+# IDEs
+.vscode/
+.idea/
