@@ -11,9 +11,14 @@ from database.db import save_roadmap
 
 # ── Step 1: NLTK Data Check ──────────────────────────────────────────────────
 def _ensure_nltk_data():
-    for r in ["punkt", "stopwords"]:
+    for r in ["punkt", "punkt_tab", "stopwords"]:
         try:
-            nltk.data.find(f"tokenizers/{r}" if r=="punkt" else f"corpora/{r}")
+            if r == "punkt":
+                nltk.data.find("tokenizers/punkt")
+            elif r == "punkt_tab":
+                nltk.data.find("tokenizers/punkt_tab")
+            else:
+                nltk.data.find("corpora/stopwords")
         except:
             nltk.download(r, quiet=True)
 

@@ -44,6 +44,7 @@ An AI-powered learning platform designed to streamline study workflows through i
     ```python
     import nltk
     nltk.download('punkt')
+    nltk.download('punkt_tab')
     nltk.download('stopwords')
     ```
 
